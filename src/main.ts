@@ -1,1 +1,1 @@
-import './api';
+export { StencilLanguageServer } from './language-server';

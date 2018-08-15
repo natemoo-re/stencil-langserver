@@ -1,6 +1,6 @@
 import * as ts from "typescript";
 import { IConnection, TextDocuments, TextDocumentIdentifier } from 'vscode-languageserver';
-import { StencilService } from "./stencil-service";
+import { StencilService } from "../stencil-service";
 
 interface DocmentMetadata {
 	componentOptions: { [key: string]: any };
