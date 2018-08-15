@@ -1,21 +1,21 @@
 # Stencil Language Server
 
-The Stencil Language Server (SLS) is built upon the [Language Server Protocol](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md). It enables anyone to add support for [Stencil](https://github.com/ionic-team/stencil) projects in their favorite editor. 
+The Stencil Language Server (SLS) is built upon the [Language Server Protocol](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md). It enables anyone to add support for [Stencil](https://github.com/ionic-team/stencil) projects in their favorite editor.
 
 ## Features
- - Context-aware completions
-		- Decorators
-		- Component Lifecycle Methods
-		- Component Methods (`hostData`, `render`)
-		- `@Watch(...props)`
-		- `@Listen(...events)`
- - Document Links
- - Diagnostics
+- Context-aware completions
+- Decorators
+	- Component Lifecycle Methods
+	- Component Methods (`hostData`, `render`)
+	- `@Watch(...props)`
+	- `@Listen(...events)`
+- Document Links
+- Diagnostics
 
 To enable these features in your editor, you can install one of the extensions below (or build your own!)
 
 ## Editor Plugins
- - **Visual Studio Code**: [Stencil Tools](https://github.com/natemoo-re/vscode-stencil-tools)
+ - **Visual Studio Code**: [Stencil Tools](https://github.com/natemoo-re/vscode-stencil-tools) *(coming soon)*
 
 ## Creating an Editor Plugin
 
