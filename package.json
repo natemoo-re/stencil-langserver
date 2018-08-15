@@ -1,0 +1,29 @@
+{
+  "name": "stencil-languageserver",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/stencilLanguageServer.umd.js",
+  "module": "dist/stencilLanguageServer.es5.js",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "tsc -w -p .",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natemoo-re/stencil-languageserver.git"
+  },
+  "author": "Nate Moore <nate@natemoo.re> (http://projects.natemoo.re/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natemoo-re/stencil-languageserver/issues"
+  },
+  "homepage": "https://github.com/natemoo-re/stencil-languageserver#readme",
+  "dependencies": {
+    "typescript": "^3.0.1",
+    "vscode-languageserver": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.0"
+  }
+}
