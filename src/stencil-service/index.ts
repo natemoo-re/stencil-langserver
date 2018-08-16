@@ -24,8 +24,8 @@ export class StencilService {
 		if (item.data && item.data.resolve) {
 			// Resolve additionalTextEdits for Decorators with AutoImport support
 			if (item.data.autoImport) {
-				const document = this.projectManager.getDocument(item.data.textDocument.uri);
-				item.additionalTextEdits = [];
+				const { stencilImport } = this.projectManager.getMetadata({ uri: item.data.textDocument.uri });
+				item.additionalTextEdits = Completion.buildAdditionalTextEdits(stencilImport, item.data.autoImport);
 			}
 			
 			// Do placeholder replacements based on Label name

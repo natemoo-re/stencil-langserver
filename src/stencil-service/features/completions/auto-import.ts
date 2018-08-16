@@ -1,7 +1,7 @@
 import * as ts from 'typescript';
 import { Range, TextEdit } from 'vscode-languageserver';
 
-interface StencilImport {
+export interface StencilImport {
 	range: Range;
 	imports: string[];
 	multiline: boolean;

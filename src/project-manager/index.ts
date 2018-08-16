@@ -1,8 +1,10 @@
 import * as ts from "typescript";
 import { IConnection, TextDocuments, TextDocumentIdentifier } from 'vscode-languageserver';
 import { StencilService } from "../stencil-service";
+import { getStencilImport, StencilImport } from '../stencil-service/features/completions/auto-import';
 
 interface DocmentMetadata {
+	stencilImport: StencilImport;
 	componentOptions: { [key: string]: any };
 	componentMembers: string[];
 	methods: string[];
@@ -38,6 +40,7 @@ export class ProjectManager {
 	}
 
 	public getMetadata(textDocument: TextDocumentIdentifier): DocmentMetadata {
+		// getStencilImport()
 		return;
 	}
 

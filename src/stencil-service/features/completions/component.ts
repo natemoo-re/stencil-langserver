@@ -175,8 +175,8 @@ export const DECORATORS: CompletionItem[] = [
 	{
 		label: 'State',
 		description: "The `@State()` decorator can be used to manage internal data for a component. Any changes to a `@State()` property will cause the components render function to be called again.",
-		insertText: "@State() ${1:stateName}: ${2|any,string,boolean,number|};",
-		preview: "@State() stateName: any",
+		insertText: "@State() ${1:stateName} = ${2:'value'};",
+		preview: "@State() stateName = 'value'",
 		autoImport: 'State'
 	},
 	{

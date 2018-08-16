@@ -1,7 +1,8 @@
 import * as ts from 'typescript';
 import { CompletionItem, CompletionItemKind, TextDocumentIdentifier, TextDocument } from 'vscode-languageserver';
-import { DECORATORS, METHODS, LIFECYCLE_METHODS } from './component';
+import { getAutoImportEdit, StencilImport } from './auto-import';
 import { getDecoratorName } from './util';
+import { DECORATORS, METHODS, LIFECYCLE_METHODS } from './component';
 
 class Completions {
 
@@ -54,6 +55,10 @@ class Completions {
 			default: break;
 		}
 		return completions;
+	}
+
+	public buildAdditionalTextEdits(stencilImport: StencilImport, insertText: string) {
+		return getAutoImportEdit(stencilImport, insertText);
 	}
 
 	private filterUnused(used: string[]) {
