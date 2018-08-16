@@ -12,6 +12,8 @@ interface DocmentMetadata {
 }
 
 export class ProjectManager {
+
+	private ts: ts.Program;
 	
 	private documents: TextDocuments;
 	public getDocument(textDocument: TextDocumentIdentifier) {
@@ -21,6 +23,8 @@ export class ProjectManager {
 	constructor() {
 		this.documents = new TextDocuments();
 		this.service = new StencilService(this);
+		this.ts = ts.createProgram([], {}, {})
+
 	}
 
 	private service: StencilService;
