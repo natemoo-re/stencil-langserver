@@ -1,0 +1,60 @@
+{
+	"name": "lsp-sample-client",
+	"description": "VSCode part of a language server",
+	"author": "Microsoft Corporation",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-extension-samples"
+	},
+	"engines": {
+		"vscode": "^1.23.0"
+	},
+	"scripts": {
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"typescript-plugin-stencil": "*",
+		"vscode": "^1.1.18",
+		"vscode-languageclient": "^4.1.4"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "source.css.styled",
+				"aliases": [
+					"CSS (Styled Components)"
+				],
+				"configuration": "./css.styled.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "source.css.styled",
+				"scopeName": "source.css.styled",
+				"path": "./syntaxes/css.styled.json"
+			},
+			{
+				"injectTo": [
+					"source.js",
+					"source.ts",
+					"source.jsx",
+					"source.js.jsx",
+					"source.tsx"
+				],
+				"scopeName": "styled",
+				"path": "./syntaxes/styled-components.json",
+				"embeddedLanguages": {
+					"source.css.scss": "css",
+					"meta.embedded.line.ts": "typescript"
+				}
+			}
+		],
+		"typescriptServerPlugins": [
+			{ "name": "typescript-plugin-stencil" }
+		]
+	}
+}
